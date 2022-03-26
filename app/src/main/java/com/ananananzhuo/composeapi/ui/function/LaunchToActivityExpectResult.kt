@@ -19,7 +19,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.ananananzhuo.composeapi.activity.GenerateActivityResultActivity
-import com.ananananzhuo.composeapi.ui.未命名文件夹.CustomScaffold
+import com.ananananzhuo.composeapi.ui.view.CustomScaffold
 
 /**
  * author  :mayong

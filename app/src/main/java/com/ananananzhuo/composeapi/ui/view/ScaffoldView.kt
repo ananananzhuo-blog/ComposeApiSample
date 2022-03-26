@@ -1,4 +1,4 @@
-package com.ananananzhuo.composeapi.ui.未命名文件夹
+package com.ananananzhuo.composeapi.ui.view
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material.*
@@ -13,8 +13,14 @@ import androidx.navigation.NavHostController
  * date    :2022/3/26
  **/
 
+/**
+ * author  :mayong
+ * function:
+ * date    :2022/3/26
+ **/
+
 @Composable
-fun CustomScaffold(title:String,controller: NavHostController?=null,content: @Composable (PaddingValues) -> Unit){
+fun CustomScaffold(title:String, controller: NavHostController?=null, content: @Composable (PaddingValues) -> Unit){
     Scaffold (topBar = {
         TopAppBar(title = {
             Text(title)

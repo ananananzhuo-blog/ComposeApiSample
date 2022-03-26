@@ -2,6 +2,7 @@ package com.ananananzhuo.composeapi
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.OnBackPressedDispatcher
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.tween
@@ -22,9 +23,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.ananananzhuo.composeapi.ui.function.AvoidFastClick
-import com.ananananzhuo.composeapi.ui.function.LaunchToActivity
+import com.ananananzhuo.composeapi.ui.function.*
 import com.ananananzhuo.composeapi.ui.theme.ComposeApiSampleTheme
+import com.ananananzhuo.composeapi.ui.view.CustomScaffold
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
@@ -54,8 +55,14 @@ fun Greet() {
            }
         },
         popEnterTransition = {
-           slideInHorizontally(tween(400)) { 0 }
+           slideInHorizontally(tween(500)) { it }
         }) {
+        composable(test){
+            Test()
+        }
+        composable(mutableStateListOfUse){
+            MutableStateListView()
+        }
         composable(home){
             Home(controller)
         }
@@ -65,27 +72,39 @@ fun Greet() {
         composable(launchToActivity){
             LaunchToActivity(controller)
         }
+        composable(backKey){
+            BackKey(controller)
+        }
+        composable(back1){
+            Back1(controller)
+        }
+        composable(back2){
+            Back2(controller)
+        }
     }
 
 }
 
 @Composable
 fun Home(controller: NavHostController) {
-    LazyColumn(content = {
-        items(datas){data->
-            Column(
-                Modifier
-                    .padding(8.dp)
-                    .fillMaxWidth()
-                    .border(width = 1.dp, color = Color.Green, shape = RoundedCornerShape(5.dp))
-                    .clickable {
-                        controller.navigate(data.route)
-                    }
-                    .padding(7.dp)
-            ) {
-                Text(text = data.title, style = TextStyle(fontSize = 14.sp))
-                Text(text = data.desc, style = TextStyle(fontSize = 12.sp, color = Color(0xff333333)), modifier = Modifier.padding(top = 8.dp))
+    CustomScaffold(title = "首页") {
+        LazyColumn(content = {
+            items(datas){data->
+                Column(
+                    Modifier
+                        .padding(8.dp)
+                        .fillMaxWidth()
+                        .border(width = 1.dp, color = Color.Green, shape = RoundedCornerShape(5.dp))
+                        .clickable {
+                            controller.navigate(data.route)
+                        }
+                        .padding(7.dp)
+                ) {
+                    Text(text = data.title, style = TextStyle(fontSize = 14.sp))
+                    Text(text = data.desc, style = TextStyle(fontSize = 12.sp, color = Color(0xff333333)), modifier = Modifier.padding(top = 8.dp))
+                }
             }
-        }
-    }, modifier = Modifier.fillMaxSize())
+        }, modifier = Modifier.fillMaxSize())
+    }
+
 }

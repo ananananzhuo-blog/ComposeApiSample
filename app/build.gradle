@@ -26,8 +26,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -69,5 +69,8 @@ dependencies {
     implementation "com.google.accompanist:accompanist-systemuicontroller:0.16.0"
     implementation("androidx.navigation:navigation-compose:2.4.0-alpha03")
     implementation 'io.github.ananananzhuo-blog:composelib:1.0.20-SNAPSHOT'
+
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha02")
+
 
 }
