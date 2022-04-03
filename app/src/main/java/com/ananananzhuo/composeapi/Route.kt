@@ -16,3 +16,4 @@ const val back2 = "back2"
 
 const val test = "test"
 const val mutableStateListOfUse = "MutableStateListView"//mutableStateListOf的使用
+const val keyboardshowandhide = "keyboardshowandhide"//团键盘弹出和关闭
