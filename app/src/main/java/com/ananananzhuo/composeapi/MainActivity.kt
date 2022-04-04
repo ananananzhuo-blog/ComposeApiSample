@@ -60,6 +60,15 @@ fun Greet() {
         composable(test){
             Test()
         }
+        composable(keyboardActionKey){
+            KeyBoardActionKey()
+        }
+        composable(keyboardshowandhide){
+            KeyboardShowAndHide()
+        }
+        composable(textoverflow){
+            TextOverflowView()
+        }
         composable(mutableStateListOfUse){
             MutableStateListView()
         }
@@ -81,9 +90,7 @@ fun Greet() {
         composable(back2){
             Back2(controller)
         }
-        composable(keyboardshowandhide){
-            KeyboardShowAndHide()
-        }
+
     }
 
 }

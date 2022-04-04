@@ -9,6 +9,8 @@ package com.ananananzhuo.composeapi
 
 val datas = mutableListOf(
     Data(route = test, title = "测试页面", desc = "测试页面"),
+    Data(route = keyboardActionKey, title = "compose软键盘如何把换行按钮变换为其它行为", desc = "compose软键盘如何把换行按钮变换为其它行为"),
+    Data(route = textoverflow, title = "Text超过一定字数后面加三个点省略", desc = "Text超过一定字数后面加三个点省略"),
     Data(route = keyboardshowandhide, title = "键盘的弹出和关闭", desc = "实现compose的键盘弹出和关闭功能"),
     Data(route = mutableStateListOfUse, title = "mutableStateListOf的使用", desc = "mutableStateListOf的使用，实现列表数据的编辑后实时刷新页面"),
     Data(route = fastClick, title = "防快速点击", desc = "compose如何防止快速点击事件"),
