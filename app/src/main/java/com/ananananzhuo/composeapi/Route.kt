@@ -8,7 +8,8 @@ package com.ananananzhuo.composeapi
 
 
 
-
+const val navigate_param_transfer1 = "navigate_param_transfer1"//导航页面双向数据传递
+const val navigate_param_transfer2 = "navigate_param_transfer2"//导航页面双向数据传递
 const val keyboardActionKey = "keyboardActionKey"//compose软键盘如何把换行按钮变换为其它行为
 const val home="home"
 const val fastClick = "fastClick"//如何避免快速点击问题

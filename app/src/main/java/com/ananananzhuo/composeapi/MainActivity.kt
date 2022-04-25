@@ -2,7 +2,6 @@ package com.ananananzhuo.composeapi
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.OnBackPressedDispatcher
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.tween
@@ -59,6 +58,12 @@ fun Greet() {
         }) {
         composable(test){
             Test()
+        }
+        composable(navigate_param_transfer1){
+            NavigateParams1View(controller)
+        }
+        composable(navigate_param_transfer2){
+            NavigateParams2View(controller)
         }
         composable(keyboardActionKey){
             KeyBoardActionKey()
