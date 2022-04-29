@@ -95,7 +95,9 @@ fun Greet() {
         composable(back2){
             Back2(controller)
         }
-
+        composable(DRAWBACKGROUND){
+            DrawBackgroundView()
+        }
     }
 
 }
